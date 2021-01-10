@@ -46,22 +46,7 @@ namespace AlgoritmosDeOrdenação.BubbleSort
                 vetor[pos] = valor;
             }
 
-            //MetodoBubbleSort.Rodar(vetor);
-
-            StreamWriter arquivoCriado;
-
-            Console.Write("Informe o caminho do arquivo: ");
-            string caminho2 = Console.ReadLine();
-
-            arquivoCriado = File.CreateText(caminho2);
-
-            for (int i = 0; i < vetor.Length; i++)
-            {
-                arquivoCriado.WriteLine(vetor[i]);
-            }
-
-            arquivoCriado.Close();
-
+            MetodoBubbleSort.Rodar(vetor);
         }
     }
 }

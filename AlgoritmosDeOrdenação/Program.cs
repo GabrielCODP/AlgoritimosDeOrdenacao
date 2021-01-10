@@ -1,5 +1,5 @@
 ﻿using System;
-using AlgoritmosDeOrdenação.BubbleSort;
+using AlgoritmosDeOrdenação.InsertionSort;
 
 
 namespace AlgoritmosDeOrdenação
@@ -8,10 +8,9 @@ namespace AlgoritmosDeOrdenação
     {
         static void Main(string[] args)
         {
-            //MetodoBubbleSort.Rodar();
-             GeradorDeValores.Rodar();
-            
-           
+            //GeradorDeValores.Rodar();
+
+            MetodoInsertionSort.Rodar();
         }
     }
 }
