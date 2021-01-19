@@ -1,4 +1,5 @@
 ﻿using System;
+using AlgoritmosDeOrdenação.SelectionSort;
 using AlgoritmosDeOrdenação.InsertionSort;
 
 
@@ -8,9 +9,8 @@ namespace AlgoritmosDeOrdenação
     {
         static void Main(string[] args)
         {
-            //GeradorDeValores.Rodar();
-
-            MetodoInsertionSort.Rodar();
+            MetodoSelectionSort.Rodar();
+            //MetodoInsertionSort.Rodar();
         }
     }
 }

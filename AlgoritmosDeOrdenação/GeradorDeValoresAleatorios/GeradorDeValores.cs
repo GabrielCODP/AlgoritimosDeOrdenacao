@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using System.IO;
+using System.IO; //Drogaria santa rita 
 
-namespace AlgoritmosDeOrdenação.BubbleSort
+namespace AlgoritmosDeOrdenação.GeradorDeValoresAleatorios
 {
 
     public static class GeradorDeValores
@@ -46,7 +46,8 @@ namespace AlgoritmosDeOrdenação.BubbleSort
                 vetor[pos] = valor;
             }
 
-            MetodoBubbleSort.Rodar(vetor);
+            //Escolher o metodo...
+            //MetodoBubbleSort.Rodar(vetor);
         }
     }
 }
