@@ -6,9 +6,7 @@ namespace AlgoritmosDeOrdenação.InsertionSort
 {
     public static class MetodoInsertionSort
     {
-        static int[] vet = new int[] { 50, 69, 8, 37, 12, 12, 5 };
-
-        static void ImprimiVetor()
+        static void ImprimiVetor(int[] vet)
         {
             Console.WriteLine();
 
@@ -17,10 +15,14 @@ namespace AlgoritmosDeOrdenação.InsertionSort
 
             Console.WriteLine();
         }
-        public static void Rodar()
+
+        public static void Rodar(int[] vet)
         {
+            Console.WriteLine($"Realizando InsertionSort em um vetor de: {vet.Length} elementos");
+
             for (int i = 1; i < vet.Length; i++) //Começa na posição 1, não começa na posição 0, por causa da comparação.
             {
+
                 int temp = vet[i]; //Pega o elemento do vetor e armazena ele (Guarda o valor,da posição i).
                 int j = i - 1; //Posição anterior ao vet[i]
 
@@ -32,8 +34,8 @@ namespace AlgoritmosDeOrdenação.InsertionSort
 
                 vet[j + 1] = temp;
 
-                Console.Write($"\n->Interação: {i}");
-                ImprimiVetor();
+                Console.WriteLine($"\n\n->Final da {i}° Interação: ");
+                ImprimiVetor(vet);
             }
 
             //Outro modo de fazer o InsertionSort
@@ -51,8 +53,6 @@ namespace AlgoritmosDeOrdenação.InsertionSort
 
             //    ImprimiVetor();
             //}
-
-
         }
     }
 }

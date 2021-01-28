@@ -9,9 +9,9 @@ namespace AlgoritmosDeOrdenação.SelectionSort
 
         //Dado um conjunto de dados, pego o menor elemento e coloco na ultima posição...
 
-        static int[] vet = new int[] { 50, 69, 8, 37, 12, 12, 5 };
+        //static int[] vet = new int[] { 50, 69, 8, 37, 12, 12, 5 };
 
-        static void ImprimiVetor()
+        static void ImprimiVetor(int[] vet)
         {
             Console.WriteLine();
 
@@ -21,31 +21,31 @@ namespace AlgoritmosDeOrdenação.SelectionSort
             Console.WriteLine();
         }
 
-        static void swap(int menorElementoInicio, int i)
+        static void swap(int menorElementoInicio, int i, int[] vet)
         {
             int temp = vet[menorElementoInicio]; //Armazena o menor elemento temporiamente.
             vet[menorElementoInicio] = vet[i];  //a posição onde estava o menor elemento,recebe o elemento inicial da posição do vetor
             vet[i] = temp;
 
-            ImprimiVetor();
+            ImprimiVetor(vet);
         }
 
-        public static void Rodar()
+        public static void Rodar(int[] vet)
         {
+            Console.WriteLine($"Realizando SelectionSort em um vetor de: {vet.Length} elementos");
 
             for (int i = 0; i < vet.Length - 1; i++)  //Vai até a penultima posição,a quantidade de iteração é (n-1)...
             {
                 int menorElementoInicio = i;
-               
 
-                for (int i2 = i + 1; i2 < vet.Length; i2++)
+                for (int i2 = i + 1; i2 < vet.Length; i2++) //Começa no proximo 
                 {
                     if (vet[menorElementoInicio] > vet[i2])
                         menorElementoInicio = i2; //Vai armazenar o menor elemento encontrado...
                 }
 
-                Console.Write($"\n->Interação: {i}");
-                swap(menorElementoInicio, i);
+                Console.WriteLine($"\n->Final da {i + 1}° Interação: ");
+                swap(menorElementoInicio, i, vet);
             }
 
 
